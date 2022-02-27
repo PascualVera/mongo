@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Roboto:wght@100&display=swap");
+* {
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+.html {
+	scroll-behavior: smooth;
+}
+
+.portada {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	max-width: 100vw;
+	height: 66vh;
+	background-image: rgb(72, 33, 64);
+	background: linear-gradient(
+		0deg,
+		rgb(72, 0, 131) 10%,
+		rgba(80, 49, 86, 0.651) 39%,
+		rgba(140, 4, 252, 0.356) 71%,
+		rgba(213, 157, 222, 0) 100%
+	);
+}
+
+.myVideo {
+	position: absolute;
+	top: 0px;
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+	overflow: hidden;
+}
+.title_container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 40%;
+	height: 70%;
+
+	border-radius: 2rem;
+	padding: 0.4em;
+	box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 5px #fff inset, 0 0 10px #fff inset,
+		0 0 20px #fff inset, 0 0 40px rgb(140, 4, 252), 0 0 40px rgb(140, 4, 252) inset,
+		0 0 80px rgb(140, 4, 252) inset, 0 0 70px rgb(140, 4, 252), 0 0 80px rgb(140, 4, 252),
+		0 0 75px rgb(140, 4, 252) inset, 0 0 110px rgb(140, 4, 252), 0 0 110px rgb(140, 4, 252) inset;
+}
+.title {
+	color: #fff;
+	font-size: 100px;
+	display: flex;
+	flex-direction: column;
+	font-family: "Roboto", sans-serif;
+	color: #fff;
+	gap: 20px;
+
+	font-style: italic;
+	text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px rgb(140, 4, 252),
+		0 0 40px rgb(140, 4, 252), 0 0 45px rgb(140, 4, 252), 0 0 60px rgb(140, 4, 252),
+		0 0 100px rgb(140, 4, 252);
+}
+.title p:first-child {
+	transform: translate(-60px);
+}
+@keyframes pulsate {
+	100% {
+		text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 40px rgb(140, 4, 252),
+			0 0 40px rgb(140, 4, 252), 0 0 45px rgb(140, 4, 252), 0 0 60px rgb(140, 4, 252),
+			0 0 100px rgb(140, 4, 252);
+	}
+	0% {
+		text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 22px #fff, 0 0 35px rgb(140, 4, 252),
+			0 0 75px rgb(140, 4, 252), 0 0 45px rgb(140, 4, 252), 0 0 65px rgb(140, 4, 252),
+			0 0 105px rgb(140, 4, 252);
+	}
+}
+@keyframes pulsateBorder {
+	100% {
+		box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 5px #fff inset, 0 0 10px #fff inset,
+			0 0 20px #fff inset, 0 0 40px rgb(140, 4, 252), 0 0 40px rgb(140, 4, 252) inset,
+			0 0 80px rgb(140, 4, 252) inset, 0 0 70px rgb(140, 4, 252), 0 0 80px rgb(140, 4, 252),
+			0 0 75px rgb(140, 4, 252) inset, 0 0 110px rgb(140, 4, 252), 0 0 110px rgb(140, 4, 252) inset;
+	}
+	0% {
+		box-shadow: 0 0 4px #fff, 0 0 9px #fff, 0 0 19px #fff, 0 0 5px #fff inset, 0 0 10px #fff inset,
+			0 0 20px #fff inset, 0 0 35px rgb(140, 4, 252), 0 0 35px rgb(140, 4, 252) inset,
+			0 0 75px rgb(140, 4, 252) inset, 0 0 65px rgb(140, 4, 252), 0 0 75px rgb(140, 4, 252),
+			0 0 75px rgb(140, 4, 252) inset, 0 0 100px rgb(140, 4, 252), 0 0 110px rgb(140, 4, 252) inset;
+	}
+}
+.vsc-controller {
+	display: none;
+}

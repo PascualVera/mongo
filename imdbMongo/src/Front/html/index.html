@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="../css/headerIndex.css" />
+		<link rel="stylesheet" href="../css/mainIndex.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+			integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<title>Document</title>
+	</head>
+	<body>
+		<header class="portada">
+			<div class="title_container">
+				<h1 class="title">
+					<p>Underground</p>
+					<p>Theatre</p>
+				</h1>
+			</div>
+			<video autoplay muted loop class="myVideo">
+				<source src="../media/backgroundVideo.mp4" type="video/mp4" />
+			</video>
+		</header>
+		<main class="container">
+			<div class="background"></div>
+			<nav class="navbar">
+				<div class="input_container_navbar">
+					<input class="input_navbar" type="text" placeholder="Actors, films, directors..." />
+					<button class="button_navbar"><i class="fas fa-search"></i></button>
+				</div>
+			</nav>
+
+			<div class="section_container">
+				<button id="btn1" class="carousel_btn"><i class="fas fa-arrow-alt-circle-up"></i></button>
+				<button id="btn2" class="carousel_btn"><i class="fas fa-arrow-alt-circle-down"></i></button>
+				<div class="section section1">
+					<video autoplay muted loop class="section_video">
+						<source src="../media/bladeRunner.mp4" type="video/mp4" />
+					</video>
+					<a href="profesional.html" class="link">Profesional Database </a>
+				</div>
+				<div class="section section2">
+					<video autoplay muted loop class="section_video">
+						<source src="../media/Alita.mp4" type="video/mp4" />
+					</video>
+
+					<a href="#" class="link">Movies Database</a>
+				</div>
+			</div>
+		</main>
+		<script src="../style.js"></script>
+	</body>
+</html>
