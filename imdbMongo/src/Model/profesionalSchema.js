@@ -7,7 +7,6 @@ const ProfesionalSchema = new mongoose.Schema({
 	weight: Number,
 	height: Number,
 	hairColor: String,
-	race: String,
 	nationality: String,
 	oscarNumber: Number,
 	profesion: String,

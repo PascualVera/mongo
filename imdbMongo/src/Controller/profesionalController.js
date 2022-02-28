@@ -27,7 +27,7 @@ const postProfesionals = async (request, response, next) => {
 		weight,
 		height,
 		hairColor,
-		race,
+
 		nationality,
 		oscarNumber,
 		profesion,
@@ -41,7 +41,7 @@ const postProfesionals = async (request, response, next) => {
 			weight,
 			height,
 			hairColor,
-			race,
+
 			nationality,
 			oscarNumber,
 			profesion,

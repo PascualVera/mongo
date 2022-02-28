@@ -8,12 +8,12 @@ dowm.addEventListener("click", () => {
 	films.style.transform = "translateY(-100%)"
 	up.style.display = "block"
 	dowm.style.display = "none"
-	document.querySelector(".section_video").currentTime = 0
+	document.querySelector(".video2").currentTime = 0
 })
 up.addEventListener("click", () => {
 	actors.style.transform = "translateY(0)"
 	films.style.transform = "translateY(0)"
 	dowm.style.display = "block"
 	up.style.display = "none"
-	document.querySelector(".section_video").currentTime = 0
+	document.querySelector(".video1").currentTime = 0
 })

@@ -29,28 +29,36 @@
 		</header>
 		<main class="container">
 			<div class="background"></div>
-			<nav class="navbar">
-				<div class="input_container_navbar">
-					<input class="input_navbar" type="text" placeholder="Actors, films, directors..." />
-					<button class="button_navbar"><i class="fas fa-search"></i></button>
+
+			<div class="header">
+				<a class="header_title" href="index.html"><p>Underground Theatre</p></a>
+				<nav class="navbar">
+					<div class="input_container_navbar">
+						<input class="input_navbar" type="text" placeholder="Actors, films, directors..." />
+						<button class="button_navbar"><i class="fas fa-search"></i></button>
+					</div>
+				</nav>
+				<div class="link_container">
+					<a href="movies.html" class="links">Movies</a
+					><a href="profesional.html" class="links">Actors</a>
 				</div>
-			</nav>
+			</div>
 
 			<div class="section_container">
 				<button id="btn1" class="carousel_btn"><i class="fas fa-arrow-alt-circle-up"></i></button>
 				<button id="btn2" class="carousel_btn"><i class="fas fa-arrow-alt-circle-down"></i></button>
 				<div class="section section1">
-					<video autoplay muted loop class="section_video">
+					<video autoplay muted loop class="section_video video1">
 						<source src="../media/bladeRunner.mp4" type="video/mp4" />
 					</video>
 					<a href="profesional.html" class="link">Profesional Database </a>
 				</div>
 				<div class="section section2">
-					<video autoplay muted loop class="section_video">
+					<video autoplay muted loop class="section_video video2">
 						<source src="../media/Alita.mp4" type="video/mp4" />
 					</video>
 
-					<a href="#" class="link">Movies Database</a>
+					<a href="movies.html" class="link">Movies Database</a>
 				</div>
 			</div>
 		</main>

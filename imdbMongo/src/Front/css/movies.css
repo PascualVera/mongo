@@ -20,9 +20,9 @@
 	font-size: 35px;
 }
 .header_title:hover {
-	text-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 8px #fff, 0 0 35px rgb(140, 4, 252),
-		0 0 25px rgb(140, 4, 252), 0 0 15px rgb(140, 4, 252), 0 0 25px rgb(140, 4, 252),
-		0 0 45px rgb(140, 4, 252);
+	text-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 8px #fff, 0 0 35px rgb(51, 99, 233),
+		0 0 25px rgb(51, 99, 233), 0 0 15px rgb(51, 99, 233), 0 0 25px rgb(51, 99, 233),
+		0 0 45px rgb(51, 99, 233);
 }
 .navbar {
 	display: flex;
@@ -46,7 +46,7 @@
 	width: 100%;
 	font-size: 18px;
 	padding-left: 20px;
-	background-color: rgba(159, 9, 218, 0.493);
+	background-color: rgba(9, 65, 218, 0.363);
 	border: none;
 	outline: none;
 	border-radius: 30px;
@@ -62,7 +62,7 @@
 	font-size: 30px;
 	color: white;
 	background: none;
-	background-color: rgba(159, 9, 218);
+	background-color: rgba(9, 65, 218, 0.363);
 	border: none;
 	cursor: pointer;
 	border-radius: 50%;
@@ -88,9 +88,9 @@
 }
 .links:hover {
 	transform: scale(1.02);
-	text-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 8px #fff, 0 0 35px rgb(140, 4, 252),
-		0 0 25px rgb(140, 4, 252), 0 0 15px rgb(140, 4, 252), 0 0 25px rgb(140, 4, 252),
-		0 0 45px rgb(140, 4, 252);
+	text-shadow: 0 0 2px #fff, 0 0 10px #fff, 0 0 8px #fff, 0 0 35px rgb(51, 99, 233),
+		0 0 25px rgb(51, 99, 233), 0 0 15px rgb(51, 99, 233), 0 0 25px rgb(51, 99, 233),
+		0 0 45px rgb(51, 99, 233);
 }
 .container {
 	width: 100%;
@@ -102,28 +102,6 @@
 	justify-content: space-around;
 	position: absolute;
 }
-.toast {
-	position: absolute;
-	right: 28%;
-	bottom: 10%;
-	width: 220px;
-	height: 100px;
-	background-color: rgba(159, 9, 218, 0.911);
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	z-index: 1;
-	border-radius: 10px;
-	transition: opacity 0.4s;
-	box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 5px #fff inset, 0 0 10px #fff inset,
-		0 0 10px #fff inset, 0 0 20px rgb(140, 4, 252), 0 0 20px rgb(140, 4, 252) inset,
-		0 0 30px rgb(140, 4, 252) inset, 0 0 30px rgb(140, 4, 252), 0 0 50px rgb(140, 4, 252),
-		0 0 50px rgb(140, 4, 252) inset;
-	color: white;
-	opacity: 0;
-	font-size: 20px;
-}
-
 .form_container {
 	width: 40%;
 	height: 100%;
@@ -146,7 +124,7 @@
 	height: 40px;
 	font-size: 16px;
 	padding-left: 8px;
-	background-color: rgba(159, 9, 218, 0.685);
+	background-color: rgba(9, 65, 218, 0.363);
 	outline: none;
 	border: none;
 	border-radius: 6px;
@@ -159,7 +137,7 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
-	-webkit-box-shadow: 0 0 10px 30px rgb(151, 0, 211) inset !important;
+	-webkit-box-shadow: 0 0 10px 30px rgb(0, 34, 128) inset !important;
 }
 #idNumber {
 	width: 50%;
@@ -178,17 +156,17 @@ input:-webkit-autofill:active {
 	border: none;
 	font-weight: bold;
 	color: aliceblue;
-	background-color: rgb(159, 9, 218);
+	background-color: rgb(2, 72, 163);
 	cursor: pointer;
 }
 .boton:hover {
-	background-color: rgb(96, 0, 134);
+	background-color: rgb(51, 99, 233);
 }
 .boton:active {
 	box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 5px #fff inset, 0 0 10px #fff inset,
-		0 0 10px #fff inset, 0 0 20px rgb(140, 4, 252), 0 0 20px rgb(140, 4, 252) inset,
-		0 0 30px rgb(140, 4, 252) inset, 0 0 30px rgb(140, 4, 252), 0 0 50px rgb(140, 4, 252),
-		0 0 50px rgb(140, 4, 252) inset;
+		0 0 10px #fff inset, 0 0 20px rgb(51, 99, 233), 0 0 20px rgb(51, 99, 233) inset,
+		0 0 30px rgb(51, 99, 233) inset, 0 0 30px rgb(51, 99, 233), 0 0 50px rgb(51, 99, 233),
+		0 0 50px rgb(51, 99, 233) inset;
 }
 .database {
 	width: 40%;
@@ -200,27 +178,27 @@ input:-webkit-autofill:active {
 	color: #fff;
 	padding: 20px;
 }
-.actor {
+.film {
 	display: flex;
 	width: 100%;
 	height: 11%;
 	margin-top: 20px;
 	transition: background-color 0.2s;
-	background-color: rgb(159, 9, 218);
+	background-color: rgb(2, 72, 163);
 	border-radius: 6px;
 	border: none;
 }
-.actor:hover {
-	background-color: rgba(159, 9, 218, 0.397);
+.film:hover {
+	background-color: rgba(2, 72, 163, 0.349);
 	cursor: pointer;
 }
-.actor:active {
+.film:active {
 	box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 5px #fff inset, 0 0 10px #fff inset,
-		0 0 10px #fff inset, 0 0 20px rgb(140, 4, 252), 0 0 20px rgb(140, 4, 252) inset,
-		0 0 30px rgb(140, 4, 252) inset, 0 0 30px rgb(140, 4, 252), 0 0 50px rgb(140, 4, 252),
-		0 0 50px rgb(140, 4, 252) inset;
+		0 0 10px #fff inset, 0 0 20px rgb(51, 99, 233), 0 0 20px rgb(51, 99, 233) inset,
+		0 0 30px rgb(51, 99, 233) inset, 0 0 30px rgb(51, 99, 233), 0 0 50px rgb(51, 99, 233),
+		0 0 50px rgb(51, 99, 233) inset;
 }
-.actor span {
+.film span {
 	display: flex;
 	width: 100%;
 	font-size: 22px;
@@ -229,28 +207,49 @@ input:-webkit-autofill:active {
 	align-items: center;
 	color: #fff;
 }
-.actor_body {
-	display: flex;
-	font-size: 18px;
-	gap: 30px;
-	flex-wrap: wrap;
-}
-.actor_img_container {
-	width: 230px;
-	height: 230px;
-	overflow: hidden;
-	border-radius: 50%;
-}
-.actor_img {
-	width: 250px;
-	height: 250px;
-}
-.actor_specs {
+.movie_body {
 	display: flex;
 	flex-direction: column;
-	gap: 20px;
+}
+.vsc_controller {
+	display: none;
+	z-index: -25;
+}
+#controller {
+	display: none;
+	z-index: -200;
+}
+.trailer {
+	aspect-ratio: 16/9;
+	width: 100%;
+	height: auto;
+}
+.movie_specs {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	width: 100%;
+	gap: 10px;
 	font-size: 20px;
-	margin-top: 90px;
+}
+.specs_title {
+	border-bottom: 1px solid white;
+	padding: 20px 20px 0px 20px;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.movie_info {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	height: 400px;
+	gap: 20px;
+	padding-left: 20px;
+}
+.movie_info p {
+	width: 240px;
+	gap: 20px;
 }
 
 /*Scroll Bar*/
@@ -271,4 +270,25 @@ input:-webkit-autofill:active {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
 	background: #555;
+}
+.toast {
+	position: absolute;
+	right: 28%;
+	bottom: 10%;
+	width: 220px;
+	height: 100px;
+	background-color: rgba(159, 9, 218, 0.911);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	border-radius: 10px;
+	transition: opacity 0.4s;
+	box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 20px #fff, 0 0 5px #fff inset, 0 0 10px #fff inset,
+		0 0 10px #fff inset, 0 0 20px rgb(140, 4, 252), 0 0 20px rgb(140, 4, 252) inset,
+		0 0 30px rgb(140, 4, 252) inset, 0 0 30px rgb(140, 4, 252), 0 0 50px rgb(140, 4, 252),
+		0 0 50px rgb(140, 4, 252) inset;
+	color: white;
+	opacity: 0;
+	font-size: 20px;
 }

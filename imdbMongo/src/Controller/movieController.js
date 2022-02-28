@@ -57,6 +57,7 @@ const getProducer = async (request, response, next) => {
 }
 const postMovie = async (request, response, next) => {
 	const {
+		trailer,
 		title,
 		releaseYear,
 		actors,
@@ -72,6 +73,7 @@ const postMovie = async (request, response, next) => {
 	try {
 		let movie = new Movie({
 			dateOfAddition: Date.now(),
+			trailer,
 			title,
 			releaseYear,
 			actors,
@@ -123,6 +125,7 @@ const addWriter = async (request, response, next) => {
 const updateMovie = async (request, response, next) => {
 	let id = request.query.id
 	const {
+		trailer,
 		title,
 		releaseYear,
 		actors,
@@ -139,6 +142,7 @@ const updateMovie = async (request, response, next) => {
 		const movieUpdate = await Movie.updateMany(
 			{ _id: id },
 			{
+				trailer: trailer,
 				title: title,
 				releaseYear: releaseYear,
 				actors: actors,

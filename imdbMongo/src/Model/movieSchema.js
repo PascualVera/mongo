@@ -1,6 +1,7 @@
 const mongoose = require("mongoose")
 
 const MovieSchema = new mongoose.Schema({
+	trailer: String,
 	dateOfAddition: Date,
 	title: String,
 	releaseYear: Number,
@@ -11,7 +12,6 @@ const MovieSchema = new mongoose.Schema({
 	language: String,
 	platform: String,
 	producer: String,
-	mainCharacterName: String,
 	genre: String,
 })
 module.exports = mongoose.model("movie", MovieSchema)

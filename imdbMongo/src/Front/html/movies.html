@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="../css/profesional.css" />
+		<link rel="stylesheet" href="../css/movies.css" />
 		<link
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -22,42 +22,26 @@
 					<input class="input_navbar" type="text" placeholder="Actors, films, directors..." />
 					<button class="button_navbar"><i class="fas fa-search"></i></button>
 				</div>
-			</nav>
-			<div class="link_container">
+			</nav>	<div class="link_container">
 				<a href="movies.html" class="links">Movies</a
 				><a href="profesional.html" class="links">Actors</a>
 			</div>
 		</header>
-		<main class="container">
+		<main class="container">		<main class="container">
 			<div class="toast"></div>
 			<div class="form_container">
 				<form action="" class="form">
-					<input type="text" class="input" placeholder="Nombre" id="name" /><input
-						type="text"
-						class="input"
-						placeholder="Edad"
-						id="age"
-					/><input type="text" class="input" placeholder="Género" id="genre" /><input
-						type="text"
-						class="input"
-						placeholder="Peso"
-						id="weight"
-					/><input type="text" class="input" placeholder="Altura" id="height" /><input
-						type="text"
-						class="input"
-						placeholder="Color de pelo"
-						id="hair"
-					/><input type="text" class="input" placeholder="Nacionalidad" id="nationality" /><input
-						type="text"
-						class="input"
-						placeholder="Número de Oscars"
-						id="oscars"
-					/><input type="text" class="input" placeholder="Profesión" id="profesion" /><input
-						type="text"
-						class="input"
-						placeholder="Foto (url)"
-						id="foto"
-					/>
+					<input type="text" class="input" id="trailer" placeholder="Trailer">
+					<input type="text" class="input" id="title" placeholder="title">
+					<input type="text" class="input" id="year" placeholder="Year">
+					<input type="text" class="input" id="actors" placeholder="Actors">
+					<input type="text" class="input" id="nationality" placeholder="Nationality">
+					<input type="text" class="input" id="director" placeholder="Director">
+					<input type="text" class="input" id="writer" placeholder="Writer">
+					<input type="text" class="input" id="language" placeholder="Language">
+					<input type="text" class="input" id="platform" placeholder="Platform">
+					<input type="text" class="input" id="producer" placeholder="Producer">
+					<input type="text" class="input" id="genre" placeholder="Genre">
 					<input type="text" class="input" placeholder="ID" id="idNumber" />
 				</form>
 				<div class="botones">
@@ -67,8 +51,7 @@
 					><button class="boton" id="btn-del">Eliminar</button>
 				</div>
 			</div>
-			<article class="database"></article>
-			<script src="../Fetch/profesionalFetch.js"></script>
-		</main>
+			<article class="database"></article></main>
+			<script src="../Fetch/movieFetch.js"></script>
 	</body>
 </html>

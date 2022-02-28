@@ -1,14 +1,14 @@
-//Declaracion de variables
-let name = document.getElementById("name")
-let age = document.getElementById("age")
-let genre = document.getElementById("genre")
-let weight = document.getElementById("weight")
-let height = document.getElementById("height")
-let hair = document.getElementById("hair")
-let nationality = document.getElementById("nationality")
-let oscars = document.getElementById("oscars")
-let profesion = document.getElementById("profesion")
-let foto = document.getElementById("foto")
+let trailer = document.querySelector("#trailer")
+let title = document.querySelector("#title")
+let year = document.querySelector("#year")
+let actors = document.querySelector("#actors")
+let nationality = document.querySelector("#nationality")
+let director = document.querySelector("#director")
+let writer = document.querySelector("#writer")
+let language = document.querySelector("#language")
+let platform = document.querySelector("#platform")
+let producer = document.querySelector("#producer")
+let genre = document.querySelector("#genre")
 let idNumber = document.querySelector("#idNumber")
 //Botones
 let mostrarBtn = document.querySelector("#btn-get")
@@ -20,9 +20,9 @@ mostrarBtn.addEventListener("click", async () => {
 	let id = idNumber.value
 	let url
 	if (id == "") {
-		url = "http://localhost:3000/profesional"
+		url = "http://localhost:3000/peliculas"
 	} else {
-		url = "http://localhost:3000/profesional?id=" + id
+		url = "http://localhost:3000/peliculas?id=" + id
 	}
 	let param = {
 		headers: {
@@ -48,7 +48,7 @@ listaActores.addEventListener("click", async (e) => {
 	const element = e.target
 	const parent = element.parentElement
 
-	let url = "http://localhost:3000/profesional?id=" + parent.getAttribute("value")
+	let url = "http://localhost:3000/peliculas?id=" + parent.getAttribute("value")
 
 	let param = {
 		headers: {
@@ -64,78 +64,75 @@ listaActores.addEventListener("click", async (e) => {
 		console.log(error)
 	}
 })
-
-//FETCH POST
 crearBtn.addEventListener("click", async () => {
 	try {
-		let url = "http://localhost:3000/profesional"
-		let profesional = {
-			name: name.value,
-			age: age.value,
-			genre: genre.value,
-			weight: weight.value,
-			height: height.value,
-			hairColor: hair.value,
+		let url = "http://localhost:3000/peliculas"
+		let movie = {
+			trailer: trailer.value,
+			title: title.value,
+			releaseYear: year.value,
+			actors: actors.value,
 			nationality: nationality.value,
-			oscarNumber: oscars.value,
-			profesion: profesion.value,
-			foto: foto.value,
+			director: director.value,
+			writer: writer.value,
+			language: language.value,
+			platform: platform.value,
+			producer: producer.value,
+			genre: genre.value,
 		}
 		let param = {
 			headers: {
 				"content-type": "application/json; charset = UTF-8",
 			},
-			body: JSON.stringify(profesional),
+			body: JSON.stringify(movie),
 			method: "POST",
 		}
 
 		let data = await fetch(url, param)
-		toast("Profesional añadido")
-		let result = await data.json()
-		console.log(result)
+		toast("Pelicula añadida")
+		console.log(data)
 	} catch (error) {
 		console.log(error)
 	}
 })
-//FETCH PUT
 actualizarBtn.addEventListener("click", async () => {
 	try {
-		let url = `http://localhost:3000/profesional?id=${idNumber.value}`
-		let profesional = {
-			name: name.value,
-			age: age.value,
-			genre: genre.value,
-			weight: weight.value,
-			height: height.value,
-			hairCOlor: hair.value,
+		let url = `http://localhost:3000/peliculas?id=${idNumber.value}`
+		let movie = {
+			trailer: trailer.value,
+			title: title.value,
+			releaseYear: year.value,
+			actors: actors.value,
 			nationality: nationality.value,
-			oscarNumber: oscars.value,
-			profesion: profesion.value,
-			foto: foto.value,
+			director: director.value,
+			writer: writer.value,
+			language: language.value,
+			platform: platform.value,
+			producer: producer.value,
+			genre: genre.value,
 		}
-		for (const item in profesional) {
-			if (profesional[item] == "" || profesional[item] == null) {
-				delete profesional[item]
+
+		for (const item in movie) {
+			if (movie[item] == "" || movie[item] == null) {
+				delete movie[item]
 			}
 		}
 		let param = {
 			headers: {
 				"content-type": "application/json; charset = UTF-8",
 			},
-			body: JSON.stringify(profesional),
+			body: JSON.stringify(movie),
 			method: "PUT",
 		}
 		let data = await fetch(url, param)
 		toast("Cambios guardados")
-		let result = await data.json()
-
 		console.log(data)
 	} catch (error) {
 		console.log(error)
 	}
 })
 eliminarBtn.addEventListener("click", async () => {
-	let url = `http://localhost:3000/profesional?id=${idNumber.value}`
+	let url = `http://localhost:3000/peliculas?id=${idNumber.value}`
 	let param = {
 		headers: {
 			"content-type": "application/json; charset = UTF-8",
@@ -145,36 +142,39 @@ eliminarBtn.addEventListener("click", async () => {
 	}
 	try {
 		let data = await fetch(url, param)
-		toast("Profesional Borrado")
+		toast("Pelicula Borrada")
 		console.log(data)
 	} catch (error) {
 		console.log(error)
 	}
 })
-//Funciones para mostrar datos
 const mostrarTodos = (database) => {
 	let post = ""
-	for (const actor of database) {
-		post += `<button value=${actor._id}  class=actor>
-		<span>Nombre: ${actor.name}</span>
-		<span>Profesion: ${actor.profesion} </span>
+	for (const film of database) {
+		post += `<button value=${film._id}  class=film>
+		<span>Titulo: ${film.title}</span>
+		<span>Año: ${film.releaseYear} </span>
 		</button>
 		`
 	}
 	return post
 }
-const mostrarUno = (actor) => {
-	let database = actor[0]
-	let post = ` <div class=actor_body>
-	<figure class=actor_img_container><img class=actor_img src=${database.foto}></figure>
-	<div class = actor_specs>
-	<p>Nombre: ${database.name}</p>
-	<p>Edad: ${database.age}</p>
+const mostrarUno = (film) => {
+	let database = film[0]
+	let post = ` <div class=movie_body>
+	<iframe class=trailer src=${database.trailer} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</iframe>
+	<div class = movie_specs>
+	<p class= specs_title> Datos de la pelicula:<p>
+	<div class=movie_info>
+	<p>Title: ${database.title}</p>
+	<p>Year: ${database.year}</p>
 	<p>Género: ${database.genre}</p>
-	<p>Peso: ${database.weight}</p>
-	<p>Altura: ${database.height}</p>
-	<p>Oscars: ${database.oscarNumber} </p>
-	<p>Profesion: ${database.profesion} </p>
+	<p>Nationality: ${database.nationality}</p>
+	<p>Language: ${database.language}</p>
+	<p>Platform: ${database.platform} </p>
+	<p>Producer: ${database.producer} </p>
+	</div>
 	</div>
 	</div>`
 	return post
